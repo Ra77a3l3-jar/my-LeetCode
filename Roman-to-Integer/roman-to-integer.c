@@ -15,34 +15,18 @@ int getValue(char c) {
 }
 
 int Roman_to_int(char *s) {
-    int repete = 0;
     int tot = 0;
 
-    int len = strlen(s);
-    
-    for(int i = 0; i < len; i++) {
-        if(s[i] == s[i + 1]) {
-            repete += 1;
+    int lenght = (int)strlen(s);
+    for(int i = 0; i < lenght; i++) {
+        int curr = getValue(s[i]);
+        int next = (i + 1 < lenght) ? getValue(s[i + 1]) : 0;
+        if(curr < next) {
+            tot += next - curr;
         } else {
-            repete = 0;
+            tot += curr;
         }
-        if(repete >= 4) {
-            printf("The number is incorrect, a number can repete max 3 times.\n");
-            return 0;
-        }
-        if((s[i] == 'L') && (s[i + 1] == 'L') ||
-            (s[i] == 'D') && (s[i + 1] == 'D') ||
-            (s[i] == 'V') && (s[i + 1] == 'V')) {
-            printf("The 'L' 'D' and 'V' cannnot repete.\n");
-            return 0;
-        }
-        if(getValue(s[i]) < getValue(s[i + 1])) {
-            tot += getValue(s[i + 1]) - getValue(s[i]);
-            i += 2;
-        } else {
-            tot += getValue(s[i]);
-            i += 1;
-        }
+        i++;
     }
     return tot;
 }
