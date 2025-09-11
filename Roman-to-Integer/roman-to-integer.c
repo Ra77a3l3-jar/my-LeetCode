@@ -14,7 +14,7 @@ int getValue(char c) {
     }
 }
 
-int Roman_to_int(char *s) {
+int romanToInt(char *s) {
     int tot = 0;
 
     int lenght = (int)strlen(s);
@@ -33,7 +33,7 @@ int Roman_to_int(char *s) {
 
 int main(void) {
     char *roman = "CDIV";
-    int arabic = Roman_to_int(roman);
+    int arabic = romanToInt(roman);
     printf("The number %s in arabic numbers is %d.\n", roman, arabic);
     return 0;
 }
