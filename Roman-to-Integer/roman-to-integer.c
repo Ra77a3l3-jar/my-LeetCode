@@ -18,22 +18,31 @@ int romanToInt(char *s) {
     int tot = 0;
 
     int lenght = (int)strlen(s);
+    if(lenght < 0 || lenght > 15) {
+        return 0;
+    }
+    
     for(int i = 0; i < lenght; i++) {
         int curr = getValue(s[i]);
         int next = (i + 1 < lenght) ? getValue(s[i + 1]) : 0;
         if(curr < next) {
             tot += next - curr;
+            i += 1;
         } else {
             tot += curr;
         }
-        i++;
     }
     return tot;
 }
 
 int main(void) {
-    char *roman = "CDIV";
+    char *roman = "MCMXCIV";
     int arabic = romanToInt(roman);
-    printf("The number %s in arabic numbers is %d.\n", roman, arabic);
+
+    char *roman0 = "CDIV";
+    int arabic0 = romanToInt(roman0);
+
+    char *roman1 = "III";
+    int arabic1 = romanToInt(roman1);
     return 0;
 }
