@@ -18,7 +18,7 @@ bool isValid(char* s) {
             topStack += 1;
             stack[topStack] = s[i];
             printf("Im adding to the stack [topStack]: %d and [i]: %d\n", topStack, i);
-            // If the found a opening bracket, it added to the top of the stack
+            // If the found is a opening bracket, it added to the top of the stack
         } else {
             printf("Topstack is: %d\n", topStack);
             if(topStack == -1) {
