@@ -13,13 +13,16 @@ bool isValid(char* s) {
     int topStack = -1;
     int i = 0;
     
-    while(s[i] != '\n') {
+    while(s[i] != '\0') {
         if(s[i] == '(' || s[i] == '[' || s[i] == '{') {
             topStack += 1;
             stack[topStack] = s[i];
+            printf("Im adding to the stack [topStack]: %d and [i]: %d\n", topStack, i);
             // If the found a opening bracket, it added to the top of the stack
         } else {
+            printf("Topstack is: %d\n", topStack);
             if(topStack == -1) {
+                printf("Stack is clean\n");
                 return false;
             }
 
@@ -28,9 +31,12 @@ bool isValid(char* s) {
                 (s[i] == ']' && stack[topStack] != '[') ||
                 (s[i] == '}' && stack[topStack] != '{')) {
                 return false;
+                printf("The bracket is %c at [%d] and the topStack is %c\n", s[i], i, stack[topStack]);
             }
             topStack -= 1; // Popping the top char in case of a match
+            printf("Found a match popping stack[%d].\n", topStack);
         }
+        i++;
     }
     return topStack == -1; // Since if top stack is != -1 means there are still unmatched pairs
 }
