@@ -3,21 +3,22 @@
 This repository is a personal workspace where I solve LeetCode problems before submitting them on the official LeetCode platform. Each problem is organized in its own folder, containing my C language solutions.
 
 ## Structure
-- Each folder corresponds to a specific LeetCode problem.
-- Solutions are written in C and named after the problem.
-
+- Each problem is organized in its own folder (named after the problem).
+- Inside each problem folder, there is a `C/` subfolder containing the C language solution file.
+- Solution files are named after the problem (e.g., `long_common_prefix.c`).
 ## Problems Solved
-- **Longest Common Prefix** (`long_common_prefix.c`)
-- **Palindrome** (`palindrome.c`)
-- **Roman to Integer** (`roman-to-integer.c`)
-- **Two Sum** (`two_Sum.c`)
-- **Merge Two Sorted Lists** (`mergw_sort_lists.c`)
+- **Longest Common Prefix** (`Longest_Common_Prefix/C/long_common_prefix.c`)
+- **Palindrome** (`Palindrome/C/palindrome.c`)
+- **Roman to Integer** (`Roman-to-Integer/C/roman-to-integer.c`)
+- **Two Sum** (`Two_Sum/C/two_Sum.c`)
+- **Valid Parentheses** (`Valid_Parentheses/C/valid_parentheses.c`)
+- **Merge Two Sorted Lists** (`Merge_Two_Sort_Lists/C/mergw_sort_lists.c`)
 
 ## Currently Working On
-- **Merge Two Sorted Lists** (`mergw_sort_lists.c`)
+- **Merge Two Sorted Lists** (`Merge_Two_Sort_Lists/C/mergw_sort_lists.c`)
 
 ## Usage
-Feel free to browse the folders and review the solutions. This repo is mainly for personal practice and reference.
+Feel free to browse the problem folders and review the solutions in their respective `C/` subfolders. This repo is mainly for personal practice and reference.
 
 ---
 
