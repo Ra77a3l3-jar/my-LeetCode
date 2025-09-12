@@ -11,6 +11,10 @@ This repository is a personal workspace where I solve LeetCode problems before s
 - **Palindrome** (`palindrome.c`)
 - **Roman to Integer** (`roman-to-integer.c`)
 - **Two Sum** (`two_Sum.c`)
+- **Merge Two Sorted Lists** (`mergw_sort_lists.c`)
+
+## Currently Working On
+- **Merge Two Sorted Lists** (`mergw_sort_lists.c`)
 
 ## Usage
 Feel free to browse the folders and review the solutions. This repo is mainly for personal practice and reference.
