@@ -2,28 +2,29 @@
 
 int removeDuplicates(int* nums, int numsSize) {
     if (numsSize == 0) return 0;
-    int write = 0; 
-    for (int read = 1; read < numsSize; read++) {
-        // Compare current element with last unique element
-        if (nums[read] != nums[write]) {
-            write++; // Found a new unique element, move 'write' forward
-            nums[write] = nums[read]; // Copy unique value to next position
+
+    // Counter of shifts(deletions)
+    int deleted = 0;
+    int lastUnique = nums[0];
+    
+    for(int i = 1; i < numsSize; i++) {
+        // If nums[i] == the last unique number it will increase the counter of shifts to leave a single unique
+        if(nums[i] == lastUnique) {
+            deleted += 1;
+        } else {
+            lastUnique = nums[i];
+            nums[i - deleted] = nums[i]; // This is the shift
         }
-        
-        printf("Iteration \n\n");
-        for(int i = 0; i < numsSize; i++) {
-            printf(" %d -", nums[i]);
-        }
-        printf("\n\n");
-        // If nums[read] == nums[write], do nothing (skip duplicate)
     }
-    // The first (write + 1) elements are unique
-    return write + 1;
+
+    numsSize -= deleted;
+
+    return numsSize;
 }
 
 int main(void) {
     // Example input: sorted array with duplicates
-    int nums[] = {1, 1, 2, 2, 3, 4, 4, 5};
+    int nums[] = {1, 1, 1, 2, 2};
     
     int numsSize = sizeof(nums) / sizeof(nums[0]);
     // Call removeDuplicates and get new size
