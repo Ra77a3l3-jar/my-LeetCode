@@ -24,7 +24,7 @@ int removeDuplicates(int* nums, int numsSize) {
 
 int main(void) {
     // Example input: sorted array with duplicates
-    int nums[] = {1, 1, 1, 2, 2};
+    int nums[] = {1, 1, 2, 2, 3, 4, 4, 5};
     
     int numsSize = sizeof(nums) / sizeof(nums[0]);
     // Call removeDuplicates and get new size
@@ -32,7 +32,7 @@ int main(void) {
     
     // Print deduplicated array
     printf("Array after removing duplicates: ");
-    for (int i = 0; i < newSize; i++) {
+    for(int i = 0; i < newSize; i++) {
         printf("%d ", nums[i]);
     }
     printf("\nNew length: %d\n", newSize);
