@@ -1,7 +1,22 @@
 #include <stdio.h>
 
 int removeElement(int* nums, int numsSize, int val) {
-    
+
+    int k = 0;
+
+    for(int i = 0; i < numsSize; i++) {
+        printf("I = %d && K = %d\n", i, k);
+        if(nums[i] != val) {
+            printf("nums[%d]: %d != %d\n", i, nums[i], val);
+            nums[k] = nums[i];
+            printf("nums[k]: %d && nums[i]: %d\n", nums[k], nums[i]);
+            k++;
+        } else {
+            printf("Skipped\n\n");
+        }
+    }
+
+    return k;
 }
 
 int main() {
