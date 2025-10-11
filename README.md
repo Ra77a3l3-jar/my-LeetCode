@@ -1,29 +1,22 @@
-# LeetCode Practice Workspace
+# 🧩 LeetCode Solutions
 
-This repository is a personal workspace where I solve LeetCode problems before submitting them on the official LeetCode platform. Each problem is organized in its own folder, containing my solutions in C and occasionally Python.
+Personal collection of algorithmic problem solutions for interview preparation.
 
-## Structure
-- Each problem is organized in its own folder (named after the problem, using underscores for spaces).
-- Inside each problem folder, there is a `C/` subfolder containing the C language solution file.
-- Some problems also have a `Python/` subfolder containing Python solutions.
-- Solution files are named after the problem, using lowercase and underscores (e.g., `long_common_prefix.c`, `two_sum.py`).
+[![Tags](https://skillicons.dev/icons?i=python,c,cpp,rust,git&theme=dark)](https://skillicons.dev)
 
-## Problems Solved
-- **Longest Common Prefix** (`Longest_Common_Prefix/C/long_common_prefix.c`)
-- **Palindrome** (`Palindrome/C/palindrome.c`, `Palindrome/Python/palindrome.py`)
-- **Roman to Integer** (`Roman_to_Integer/C/roman_to_integer.c`)
-- **Two Sum** (`Two_Sum/C/two_sum.c`, `Two_Sum/Python/two_sum.py`)
-- **Valid Parentheses** (`Valid_Parentheses/C/valid_parentheses.c`)
-- **Merge Two Sorted Lists** (`Merge_Two_Sort_Lists/C/merge_sort_lists.c`)
-- **Remove Duplicated from Sorted List** (`Remove_Duplicated_from_Sorted_List/C/remove_duplicates_sort_list.c`)
-- **Remove Element** (`Remove_Element/C/remove_element.c`)
+## 📁 Exercises
+- **Two Sum** (`Two_Sum/`) - Find two numbers that add up to target
+- **Longest Common Prefix** (`Longest_Common_Prefix/`) - Find longest common prefix among strings
+- **Valid Parentheses** (`Valid_Parentheses/`) - Check if parentheses are balanced
+- **Palindrome** (`Palindrome/`) - Determine if string reads the same backwards
+- **Roman to Integer** (`Roman_to_Integer/`) - Convert Roman numerals to integers
+- **Merge Two Sorted Lists** (`Merge_Two_Sort_Lists/`) - Merge sorted linked lists
+- **Remove Duplicates from Sorted List** (`Remove_Duplicated_from_Sorted_List/`) - Remove duplicates from sorted linked list
+- **Remove Element** (`Remove_Element/`) - Remove specific element from array
+- **Search Insert Position** (`Search_Insert_Position/`) - Find position to insert element
+- **Power of Two** (`Power_of_Two/`) - Check if number is power of two
+- **Valid Palindrome** (`Valid_Palindrome/`) - Check if string is palindrome ignoring non-alphanumeric
+- **Length of Last Word** (`Lenght_of_Last_Word/`) - Find length of last word in string
+- **Find Index of First Occurrence** (`Find_Index_of_First_Occurrence_in_String/`) - Find first occurrence of substring
 
-## Currently Working On
-- (No active problem. Update this section when starting a new one.)
-
-## Usage
-Feel free to browse the problem folders and review the solutions in their respective `C/` and `Python/` subfolders. This repo is mainly for personal practice and reference.
-
----
-
-*Happy coding!*
+This repository serves as my personal training ground 🎯 for tackling LeetCode challenges before official submission. Each problem resides in its dedicated folder 📂, featuring implementations in both C and Python that showcase different approaches to algorithmic problem-solving 💡.
