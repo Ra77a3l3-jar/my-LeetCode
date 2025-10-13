@@ -16,3 +16,5 @@ class Solution:
             if res[key] > max_count:
                 max_count = res[key]
                 max_key = key   
+
+        return max_key
