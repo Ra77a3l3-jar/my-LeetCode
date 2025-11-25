@@ -1,41 +1,22 @@
 #include <stdio.h>
+#include <stdlib.h>
 
-int removeDuplicates(int* nums, int numsSize) {
-    if (numsSize == 0) return 0;
+struct ListNode {
+    int val;
+    struct ListNode *next;
+};
 
-    // Counter of shifts(deletions)
-    int deleted = 0;
-    int lastUnique = nums[0];
-    
-    for(int i = 1; i < numsSize; i++) {
-        // If nums[i] == the last unique number it will increase the counter of shifts to leave a single unique
-        if(nums[i] == lastUnique) {
-            deleted += 1;
+struct ListNode* deleteDuplicates(struct ListNode* head) {
+    struct ListNode *current = head;
+
+    while (current != NULL && current->next != NULL) {
+        if (current->val == current->next->val) {
+            struct ListNode *tmp = current->next;
+            current->next = tmp->next;
+            free(tmp);
         } else {
-            lastUnique = nums[i];
-            nums[i - deleted] = nums[i]; // This is the shift
+            current = current->next;
         }
     }
-
-    numsSize -= deleted;
-
-    return numsSize;
-}
-
-int main(void) {
-    // Example input: sorted array with duplicates
-    int nums[] = {1, 1, 2, 2, 3, 4, 4, 5};
-    
-    int numsSize = sizeof(nums) / sizeof(nums[0]);
-    // Call removeDuplicates and get new size
-    int newSize = removeDuplicates(nums, numsSize);
-    
-    // Print deduplicated array
-    printf("Array after removing duplicates: ");
-    for(int i = 0; i < newSize; i++) {
-        printf("%d ", nums[i]);
-    }
-    printf("\nNew length: %d\n", newSize);
-
-    return 0;
+    return head;
 }
